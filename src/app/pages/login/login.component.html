@@ -1,0 +1,55 @@
+<div class="contenedor fondo-bg">
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="container-logo">
+                    <mat-icon class="icon-logo" aria-hidden="false" aria-label="Example home icon">mark_email_unread</mat-icon>
+                    <br>
+                    <h1 class="title">Inicia sesión en Twitter </h1>
+                </div>
+                
+                <br>
+                <mat-form-field style="width: 100%;" appearance="fill">
+                    <mat-label>Teléfono, correo o usuario</mat-label>
+                    <input [(ngModel)]="email" name="email" class="text-white" type="email" matInput>
+                </mat-form-field>
+                <mat-form-field style="width: 100%;" appearance="fill">
+                    <mat-label>Contraseña</mat-label>
+                    <input [(ngModel)]="pass" name="pass" class="text-white" type="password" matInput>
+                </mat-form-field>
+                <br>
+                <button (click)="iniciarSesionConEmailYPassword()" class="btn-inicio color-bg-btn" mat-raised-button>Iniciar sesión</button>
+                <br>
+                <br>
+                <h5 class="color-text-blue center registro-text pointer"> <span (click)="goToPage('recuperar-password')">¿Olvidaste tu contraseña?</span> . <span (click)="goToPage('registro')"> Regístrate en Twitter </span></h5>
+            
+                <br>
+                <button class="btn-inicio color-bg-google" mat-raised-button>Iniciar sesión con Google</button>
+                <br>
+                <br>
+                <button class="btn-inicio color-bg-facebook" mat-raised-button>Iniciar sesión con Facebook</button>
+                <br>
+                <br>
+                <button class="btn-inicio color-bg-white" mat-raised-button>
+                    <span style="color: black;">Iniciar sesión con Github</span>
+                </button>
+                <br>
+                <br>
+                <button class="btn-inicio color-bg-btn" mat-raised-button>Iniciar sesión con Twitter</button>
+                <br>
+                <!--
+                <br>
+                <button class="btn-inicio color-bg-apple" mat-raised-button>Iniciar sesión con Apple</button>
+                -->
+                
+                <br>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+

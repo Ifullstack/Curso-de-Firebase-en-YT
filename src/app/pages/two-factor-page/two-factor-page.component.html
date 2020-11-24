@@ -1,0 +1,72 @@
+<div class="contenedor fondo-bg">
+    <br>
+    <br>
+    <div class="container">
+      
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="container-logo">
+                    <mat-icon class="icon-logo" aria-hidden="false" aria-label="Example home icon">mark_email_unread</mat-icon>
+                    <br>
+                    <h1 class="title">Inicia sesión con tu número de teléfono</h1>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <h3 class="title">Número de teléfono</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-3">
+
+                        <mat-form-field style="width: 100%;" appearance="fill">
+                            <input [(ngModel)]="phoneNumber.countryCode" name="countryCode" maxlength="2" placeholder="+34"  class="inputs-style"  matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field style="width: 100%;" appearance="fill">
+                            <input [(ngModel)]="phoneNumber.zona" name="zona" maxlength="3" placeholder="555" class="inputs-style"  matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field style="width: 100%;" appearance="fill">
+                            <input [(ngModel)]="phoneNumber.prefix" name="prefix" maxlength="3" placeholder="555" class="inputs-style"  matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-3">
+                        <mat-form-field style="width: 100%;" appearance="fill">
+                            <input [(ngModel)]="phoneNumber.linea" name="linea" maxlength="4" placeholder="5555" class="inputs-style" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <br>
+                <div id="recaptcha-container"></div>
+
+                <br>
+                <button (click)="sendLoginCode()" class="btn-inicio color-bg-btn" mat-raised-button>Enviar código de verificación</button>  
+                <br>
+                <br>
+                <div *ngIf="smsEnviado">
+                    <h3 class="title">Ingresa Código de Verificación</h3>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-3">
+                            <mat-form-field style="width: 100%;" appearance="fill">
+                                <input [(ngModel)]="verificationCode" name="verificationCode" type="text" placeholder="Enter your Code" class="inputs-style" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button *ngIf="smsEnviado" (click)="verificarSmsCode()" class="btn-inicio color-bg-btn" mat-raised-button>Verificar código</button>  
+                <br>
+               
+            </div>
+
+           
+            
+        </div>
+    </div>
+</div>

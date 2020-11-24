@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.fondo-bg {
+    background-color: rgb(21, 32, 43);
+}
+
+.color-bg-btn {
+    background-color: rgb(29, 161, 242);
+}
+
+.color-bg-google {
+    background-color: #DB4437;
+}
+
+.color-bg-facebook {
+    background-color: #4267B2;
+}
+
+.color-bg-white {
+    background-color: white;
+}
+
+.color-bg-apple {
+    background-color: black;
+}
+
+.text-white {
+    color: white ;
+}
+
+.color-text-blue {
+    color: rgb(27, 149, 224);
+}
+
+.center {
+    text-align: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
